@@ -31,27 +31,21 @@ jobs:
         run: |
           bun -e '
             import { Glob } from "bun";
-            const files = [];
-            for await (const f of new Glob("**/*.md").scan(".")) files.push(f);
-            const anchors = new Map();
-            for (const f of files) {
-              const t = await Bun.file(f).text();
-              for (const m of t.matchAll(/^#{1,6}\s+(.+)$/gm))
-                (anchors.get(f) ?? anchors.set(f, new Set()).get(f)).add(
-                  m[1].toLowerCase().replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-"));
-            }
+            const mdFiles = [];
+            for await (const f of new Glob("**/*.md").scan(".")) mdFiles.push(f);
+            const allFiles = new Set();
+            for await (const f of new Glob("**/*").scan({ cwd: ".", dot: true })) allFiles.add(f);
             let bad = 0;
-            for (const f of files) {
+            for (const f of mdFiles) {
               const t = await Bun.file(f).text();
               for (const m of t.matchAll(/\]\((?!https?:|mailto:|#)([^)#]+)(#[^)]*)?\)/g)) {
-                const target = m[1].split("/").pop() || "README.md";
                 const dir = f.includes("/") ? f.slice(0, f.lastIndexOf("/") + 1) : "";
                 const path = (dir + m[1]).split("#")[0] || f;
-                if (!files.includes(path)) { console.log(`BROKEN ${f}: ${m[1]}`); bad++; }
+                if (!allFiles.has(path)) { console.log(`BROKEN ${f}: ${m[1]}`); bad++; }
               }
             }
             if (bad) process.exit(1);
-            console.log(`checked ${files.length} markdown files, links resolve`);
+            console.log(`checked ${mdFiles.length} markdown files, links resolve`);
           '
 
       - name: live sources (informational — external APIs flap)
