@@ -1,0 +1,11 @@
+# Internal working notes — never published
+hidden/
+
+# OS / editor noise
+.DS_Store
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
