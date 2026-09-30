@@ -57,11 +57,16 @@ once; Sep 28 introduced "ran each test five times"; the Ember-1 piece calls
 it "the same consistency check I've been adding to my recent testing." The
 format is being invented in public, and the author is upfront about it.
 
-## 7. Author beat pivot
+## 7. Author beat pivot — RETRACTED (was our error)
 
-Jessica Wachtel's archive is InfluxDB tutorials from 2022 (InfluxData bio:
-"Developer Marketing Writer"). The AI-model benchmark beat is a September
-2026 pivot. Not disqualifying — but the domain authority is weeks old.
+The earlier claim that Jessica Wachtel's benchmark beat was a "September 2026
+pivot" is wrong. Her "X vs Y" hands-on format dates to 2025-09-02 (vibe-coding
+tool comparison); LLM comparison pieces run May–Jul 2026 (~16 total). She
+benchmarked **Kimi K3 herself on 2026-07-20** ("Claude Fable 5 vs. Kimi K3:
+Same results, one-third the cost, 4x slower") — the Ember-1 piece is the
+*sequel to her own baseline*, same hands, same real-coding-jobs methodology.
+Nobody covering this noticed. This cuts *for* the baseline's credibility, not
+against it. (Author deep-dive, 2026-09-30.)
 
 ## 8. SEO-mill coverage, zero disclosure
 

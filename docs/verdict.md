@@ -43,8 +43,12 @@ a standard ad-supported tech pub, nothing exotic.
   post" marker, and TNS's disclosure guidelines require one on paid posts.
 - **No Fireworks beat**: WP search shows the Ember-1 piece is the only recent
   Fireworks story — no cadence suggesting a relationship.
-- Author background: InfluxDB tutorials (2022-era); the AI-model benchmark beat
-  is a Sep 2026 pivot. Full recon in `../hidden/site-dig.md`.
+- Author background: InfluxData developer-marketing writer; her "X vs Y" hands-on
+  format dates to 2025-09-02 and she benchmarked **Kimi K3 herself on
+  2026-07-20** ("Same results, one-third the cost, 4x slower") — the Ember-1
+  piece is the sequel to her own baseline, same methodology. (The earlier
+  "Sep 2026 pivot" framing was wrong; retracted.) Full recon in
+  `../hidden/author-dig.md`.
 
 ## Reality check, claim by claim
 

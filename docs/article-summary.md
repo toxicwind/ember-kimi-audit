@@ -41,6 +41,23 @@ re-running with no prior chat context (Sep 29). The pieces document their own
 corrections — oddly honest for a bought-placement theory, and a real traffic
 product either way.
 
+## Author's own baseline: she benchmarked Kimi K3 two months earlier
+
+On 2026-07-20 Wachtel published "Claude Fable 5 vs. Kimi K3: Same results,
+one-third the cost, 4x slower" — real coding jobs on the `fd` repo (bug fix,
+multi-file refactor, feature build), identical prompts, stopwatch timing,
+tokens/cost from Cursor's dashboard, explicit cross-article comparability
+framing. The Ember-1 piece (Sep 29) is the sequel to her own baseline — same
+hands, same methodology. Nobody covering the launch noticed. This strengthens
+the baseline's credibility rather than weakening it.
+
+## Sep 29 double-header
+
+Ember-1 published 12:00:00Z; `claude-opus-5-5-vs-fable-5-1` followed at
+15:00:00Z the same day. The benchmark series is a high-throughput traffic
+product — which coexists with, rather than contradicts, the honest
+methodology.
+
 ## Author's verdict
 
 "About as accurate as Kimi K3, far fewer reasoning tokens. If you have time and

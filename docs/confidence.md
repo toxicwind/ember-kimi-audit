@@ -37,7 +37,7 @@ change the number. High confidence ≠ verified — only live sources verify.
 
 | # | Claim | Confidence | Why |
 |---|---|---|---|
-| 14 | The TNS article is sponsored/deceptive SEO | **15%** | Disclosed investor tie (automated per-story module), full prompts published, methodology that undercuts Fireworks' 40% headline, anti-Fireworks pricing paragraph. A bought piece doesn't do any of that. |
+| 14 | The TNS article is sponsored/deceptive SEO | **10%** | Disclosed investor tie (automated per-story module), full prompts published, methodology that undercuts Fireworks' 40% headline, anti-Fireworks pricing paragraph. Author deep-dive (2026-09-30) verified the disclosure module fires correctly (Ember-1: "Fireworks"; controls: Databricks 2025-06-11, predating the series), zero "sponsored this post" markers on any of the 5 pieces, and no Fireworks hits on TNS's sponsors page. A bought piece doesn't do any of that. |
 | 15 | The article's 3.4× was measured honestly on Fireworks' endpoint | **80%** | Internally consistent (3.30×/3.21×/3.81× across test sets), full token/time/cost tables, replicable prompts. The 20% is the usual single-author-benchmark risk, not dishonesty. |
 | 16 | The author's 5-run methodology is applied as described | **75%** | Her own copy documents the method evolving in real time (1 run → 5 runs), which is oddly honest. No independent replication exists. |
 

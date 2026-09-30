@@ -105,10 +105,10 @@ move it:
 - Ember-1 is real and built on K3: **97%**
 - "Built on" = real weight updates (not prompting): **55%**
 - 3.4× is a model property: **25%**
-- TNS article is bought SEO: **15%**
+- TNS article is bought SEO: **10%**
 - Ember-1 is a marketing vehicle for Fireworks' Training platform: **70%**
 
-All 21: [`docs/confidence.md`](docs/confidence.md). Anything under 60% is
+All 23: [`docs/confidence.md`](docs/confidence.md). Anything under 60% is
 "don't bet on it."
 
 ## Reproduce it live

@@ -4,6 +4,16 @@ All notable changes to this audit. Dates are America/Denver.
 
 ## [Unreleased]
 ### Added
+- Author deep-dive lane (Quill) complete: Wachtel benchmarked Kimi K3 herself
+  on 2026-07-20 — the Ember-1 piece is the sequel to her own baseline (same
+  hands, same methodology); disclosure module verified working with pre-series
+  controls; Sep 29 double-header documented.
+### Fixed
+- RETRACTED the "Sep 2026 pivot" claim in `docs/oddities.md` #7 and
+  `docs/verdict.md`: her "X vs Y" format dates to 2025-09-02, ~16 LLM
+  comparison pieces May–Jul 2026. It was our error, not hers.
+- Confidence #14 (TNS article is sponsored SEO): 15% → 10% on verified
+  disclosure mechanics.
 - "On-policy planning and learning" demystified: Fireworks' own cookbook documents
   their async RL recipe as GRPO-family with a literal "`0` is fully on-policy"
   knob — confidence #8 raised 35% → 60% (exact Ember-1 reward recipe still
