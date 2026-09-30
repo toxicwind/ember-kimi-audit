@@ -1,7 +1,7 @@
 <div align="right">
 
 [![audit: live](https://img.shields.io/badge/audit-live%20sources-1f6feb?style=for-the-badge)](docs/verdict.md)
-[![weirdness: documented](https://img.shields.io/badge/weirdness-15%20oddities-critical?style=for-the-badge)](docs/oddities.md)
+[![weirdness: documented](https://img.shields.io/badge/weirdness-16%20oddities-critical?style=for-the-badge)](docs/oddities.md)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
 </div>
@@ -74,7 +74,7 @@ Full claim-by-claim: [`docs/verdict.md`](docs/verdict.md).
 
 ## The weirdness
 
-Fifteen documented oddities — the short version:
+Sixteen documented oddities — the short version:
 
 - **The training algorithm is a phrase, not a method.** "On-policy planning and
   learning" has no loss function, no data mix, no pipeline. You can't audit
@@ -87,9 +87,13 @@ Fifteen documented oddities — the short version:
 - **Zero Reddit footprint** for a 586-point HN launch. No independent
   Ember-1-vs-K3 benchmark exists anywhere — the TNS piece is the only
   head-to-head in existence.
-- **Availability cliff:** the Research Preview ends ~Oct 7, 2026.
+- **Oct 7 is a demand decision point, not a kill date.** Permanence is "based on
+  community demand."
+- **Per-token pricing rewards long thinking.** Only margin-absorbers want it
+  short — Ember-1 is Fireworks monetizing its own margin, and the launch blog
+  closes by pitching their Training platform.
 
-All thirteen: [`docs/oddities.md`](docs/oddities.md).
+All sixteen: [`docs/oddities.md`](docs/oddities.md).
 
 ## Confidence ratios
 
@@ -143,8 +147,8 @@ ember-kimi-audit/
 ├── README.md                  # this file
 ├── docs/
 │   ├── verdict.md             # the full verdict, claim by claim
-│   ├── oddities.md            # 13 documented oddities (the weirdness file)
-│   ├── confidence.md          # 21 confidence ratios — speculation with numbers
+│   ├── oddities.md            # 16 documented oddities (the weirdness file)
+│   ├── confidence.md          # 23 confidence ratios — speculation with numbers
 │   └── article-summary.md     # the TNS article's claims, distilled
 ├── scripts/
 │   ├── live-check.ts          # one-command live audit (reads .env)

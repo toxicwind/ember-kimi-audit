@@ -93,12 +93,12 @@ wasteful, they were occasionally harmful. (dev.to/jamilxt, temperaturezero.)
 This is the one finding that cuts *for* Ember-1 being genuinely different,
 not just cheaper.
 
-## 12. Availability cliff
+## 12. Availability decision point, not cliff
 
-Two-week Research Preview ends ~Oct 7, 2026; continued serving "depends on
-usage." API-only, no weights published, single provider (Fireworks) — plus
-Vercel AI Gateway now serving `fireworks/ember-1` (1M context, ZDR). Evaluate
-now or lose the endpoint.
+Two-week Research Preview decision point ~Oct 7, 2026 — permanence is "based on
+community demand," not a guaranteed kill date. API-only, no weights published,
+single provider (Fireworks) — plus Vercel AI Gateway now serving
+`fireworks/ember-1` (1M context, ZDR). Evaluate now or lose the endpoint.
 
 ## 13. The 401 calibration trap
 
@@ -154,3 +154,13 @@ published honestly. Whether it recurred is unknown.
 - genztech.blog independently verified the K3 baseline (93.4% via vals.ai vs
   Fireworks' 93.2%) — the shared baseline is credible; only Ember-1's side
   lacks outside confirmation.
+
+## 16. Per-token pricing rewards long thinking — only margin-absorbers want it short
+
+From the chatter lane: Threads poster @joonlee0228 noted the incentive flip —
+under per-token pricing, providers *benefit* from longer thinking traces, so
+short-thinking models only appeal to players absorbing their own serving
+margin. Ember-1 is Fireworks monetizing its own margin advantage, and the
+launch blog closes by pitching the Fireworks Training platform — the model
+doubles as a training-product marketing vehicle. Nobody in the mainstream
+coverage has pointed this out.

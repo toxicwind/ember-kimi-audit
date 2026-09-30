@@ -32,6 +32,15 @@
 - Observed (not in marketing): **3.4× faster**, **23% fewer reasoning tokens**
   overall, 24% cheaper on Fireworks — but Kimi at the cheapest provider undercuts it.
 
+## Methodology evolution across the series
+
+Wachtel published three benchmark-format articles in four days, and her method
+improved in real time: one run per problem (Sep 26) → five runs with min/max
+averaging (Sep 28) → five runs plus a "recently added consistency check"
+re-running with no prior chat context (Sep 29). The pieces document their own
+corrections — oddly honest for a bought-placement theory, and a real traffic
+product either way.
+
 ## Author's verdict
 
 "About as accurate as Kimi K3, far fewer reasoning tokens. If you have time and
