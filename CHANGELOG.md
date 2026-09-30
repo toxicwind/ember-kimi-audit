@@ -4,6 +4,18 @@ All notable changes to this audit. Dates are America/Denver.
 
 ## [Unreleased]
 ### Added
+- "On-policy planning and learning" demystified: Fireworks' own cookbook documents
+  their async RL recipe as GRPO-family with a literal "`0` is fully on-policy"
+  knob — confidence #8 raised 35% → 60% (exact Ember-1 reward recipe still
+  undisclosed).
+- License-gate odds raised: Fireworks was Moonshot's day-0 K3 launch partner
+  (Jul 27, 2026); serving base K3 trips the same $20M gate — confidence #22
+  raised 45% → 70%. Gate was in the original Jul 27 license, not a later
+  update; License §4(b) "certified inference partner" exemption noted.
+- Corrections: NSA/FBI/CISA advisory is AA26-251A dated **Sep 8** (not Sep 9);
+  Moonshot denied the earlier July accusation but has no public response to
+  the September advisory. LLM Reference tracks "Ember" as a Fireworks model
+  family (1 model, 2.78T params listed).
 - `docs/oddities.md` #16: per-token pricing rewards long thinking — Ember-1 as
   Fireworks monetizing its own margin, doubling as Training-platform marketing.
 ### Fixed

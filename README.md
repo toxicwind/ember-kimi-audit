@@ -66,9 +66,9 @@ weird stuff is in the [oddities file](docs/oddities.md).
 | 4 | $3/$15 on OpenRouter; Kimi as low as $1/$9 elsewhere | ✅ Verified | Floor now lower: Sail Research $0.3654/$9.13 live |
 | 5 | 14/15 vs 15/15 perfect runs | ✅ Internally consistent | Not independently reproducible without spend (~$6) |
 | 6 | Free providers host Kimi K3 / Ember-1 | ⚠️ Split | Ember-1: nobody. Kimi K3: free tiers off-OR (ZenMux, TokenRouter, NaraRoute, aihubmix) |
-| 7 | "On-policy planning and learning" is a disclosed method | ❌ Phrase, not method | No loss, data mix, or pipeline published — [confidence #8](docs/confidence.md) |
+| 7 | "On-policy planning and learning" is a disclosed method | ⚠️ Demystified, still partial | It's GRPO-family async RL — Fireworks' own cookbook documents `GRPO/TIS/KL` and a literal "`0` is fully on-policy" knob — but Ember-1's exact reward recipe is undisclosed — [confidence #8](docs/confidence.md) |
 | 8 | Bedside Bench relationship undisclosed | ❌ Mostly wrong | Doximity released it open (CC BY-NC-SA 4.0) Sep 22, *before* Ember-1 — [oddities #2](docs/oddities.md#2-bedside-bench--the-undeclared-relationship-critique-is-mostly-wrong) |
-| 9 | Ember-1's commercial serving is covered by a Moonshot license agreement | ❓ Unknown | K3's license *requires* one for MaaS >$20M revenue; none disclosed — [oddities #14](docs/oddities.md#14-the-kimi-k3-license-gate--ember-1s-commercial-serving-may-require-a-moonshot-deal-nobody-has-disclosed) |
+| 9 | Ember-1's commercial serving is covered by a Moonshot license agreement | ⚠️ Likely, unconfirmed | K3's license *requires* one for MaaS >$20M revenue; none disclosed — but Fireworks was Moonshot's day-0 K3 launch partner (Jul 27), so paper was probably signed in July — [oddities #14](docs/oddities.md#14-the-kimi-k3-license-gate--ember-1s-commercial-serving-may-require-a-moonshot-deal-nobody-has-disclosed) |
 
 Full claim-by-claim: [`docs/verdict.md`](docs/verdict.md).
 
@@ -76,9 +76,10 @@ Full claim-by-claim: [`docs/verdict.md`](docs/verdict.md).
 
 Sixteen documented oddities — the short version:
 
-- **The training algorithm is a phrase, not a method.** "On-policy planning and
-  learning" has no loss function, no data mix, no pipeline. You can't audit
-  what isn't described.
+- **The training phrase is now anchored.** "On-policy planning and learning" =
+  Fireworks' GRPO-family async RL (their own cookbook documents the
+  `max_head_offpolicy_versions` = 0 knob). But Ember-1's exact reward recipe —
+  whatever makes reasoning *shorter* — is still undisclosed.
 - **The 3.4× headline is endpoint-locked.** Off Fireworks, the speed ordering
   can invert.
 - **Shorter reasoning *outperforms* longer traces** on Terminal Bench 2.1 and

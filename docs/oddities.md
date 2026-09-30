@@ -122,14 +122,23 @@ Section 2, verified against the license text in the
 > the Software **or its derivative works** for any commercial purpose."
 
 Fireworks is a MaaS business with a self-reported >$1B annualized run rate
-($1.505B Series D at $17.5B, July 2026). Ember-1 is a derivative work of Kimi
+($1.505B Series D at $17.5B, July 2026 — CNBC). Ember-1 is a derivative work of Kimi
 K3 served commercially. The license gate squarely applies — and no Moonshot
-agreement has been disclosed by either side. Moonshot has said zero words
-about Ember-1 at all, while negotiating up-to-30% revenue shares with
-AWS/Microsoft/Google. Layer the Sep 9, 2026 NSA/FBI/CISA accusation that
-Moonshot distilled US models: the lineage question cuts both ways — an
-American company's closed derivative of a Chinese model that US agencies say
-was distilled from American models.
+agreement has been disclosed by either side. But the odds of a papered deal
+went up: Fireworks was Moonshot's **day-0 K3 launch partner** (Moonshot AI on
+LinkedIn, Jul 27, 2026: "Happy to have Fireworks AI as our day0 launch partner
+and bring Kimi K3 to more developers"), and K3 reaches enterprise users
+*through Fireworks on Microsoft Foundry* (TechNode, Jul 30). Serving base K3
+commercially would trip the same $20M gate, so something was almost certainly
+papered in July. Possible escape hatch: License §4(b) exempts "certified
+inference partners." Still missing: any statement naming Ember-1, and Moonshot
+has said zero words about it — while negotiating up-to-30% revenue shares with
+AWS/Microsoft/Google. Layer the Sep 8, 2026 NSA/FBI/CISA advisory (AA26-251A)
+accusing Moonshot of distilling US models: the lineage question cuts both
+ways — an American company's closed derivative of a Chinese model that US
+agencies say was distilled from American models. Note: the $20M gate was in
+the license at the Jul 27 weight release — there was no later "update" adding
+it.
 
 ## 15. At least three different things are called "Ember"
 
