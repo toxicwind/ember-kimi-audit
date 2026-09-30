@@ -34,7 +34,7 @@ with undisclosed quality methodology. n=2, no published eval protocol.
 
 ## 4. Co-founder overclaim on X
 
-Lin Qiao (Sep 27): "40% faster and cheaper," "hot on HN." Launch materials
+Dzhulgakov (Sep 27): "40% faster and cheaper," "hot on HN." Launch materials
 substantiate a token *reduction* — not a general 40% latency improvement.
 (runtimewire flagged the gap.)
 
@@ -178,3 +178,29 @@ margin. Ember-1 is Fireworks monetizing its own margin advantage, and the
 launch blog closes by pitching the Fireworks Training platform — the model
 doubles as a training-product marketing vehicle. Nobody in the mainstream
 coverage has pointed this out.
+
+## 17. Fireworks' entire GPU fleet is enumerable from public DNS (381 subdomains)
+
+Infra recon (live, 2026-09-30): subfinder passive sources return 381
+fireworks.ai subdomains. The whole inference topology is in the open —
+every GPU provider (CoreWeave, Crusoe, Nebius, Lambda, Fluidstack,
+DigitalOcean, Vultr, VoltagePark, OCI, AWS, GCP), every region, per-region
+Harbor container registries, and `*-prometheus` metrics endpoints for nearly
+all of it. Dev/staging names are public too (`dev.api`, `staging`,
+`v2.staging.api`, `gateway-preview`, `auth-dev`, `kevin-test-tunnel`,
+`fake-server-proxied`, `crusoe-inference-eu-iceland1-dev-minio.tunnel` — a
+MinIO object store on a dev tunnel). The *sensitive* names (langfuse,
+auth, harbor) don't resolve — good hygiene on the observability/auth tier,
+which suggests the leak is neglect, not policy.
+
+## 18. Fireworks runs on Microsoft Entra; Moonshot still speaks TLS 1.0
+
+Same recon, nuclei light pass: `login.microsoftonline.com/fireworks.ai`
+resolves — tenant ID `9f2bf378-6816-47ef-88e2-7d26d45d19d0`, so Fireworks'
+corporate identity is on Azure AD and enumerable from outside.
+`www.moonshot.ai` still accepts TLS 1.0/1.1 (`TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`,
+severity low) behind its Cloudflare front. Also: the fireworks.ai apex
+serves Vercel Security Checkpoint challenges to non-browser clients, and
+`eval.fireworks.ai` sits behind Google OAuth — the eval portal is an
+internal gated app, not a public page. Full report:
+`hidden/infra-recon.md` (infra-recon lane, `hidden/` not published).
