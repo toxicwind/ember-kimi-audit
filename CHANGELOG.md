@@ -4,11 +4,27 @@ All notable changes to this audit. Dates are America/Denver.
 
 ## [Unreleased]
 ### Added
+- Marquee star-grade pass: CI (push/PR + weekly drift check), `package.json`
+  scripts (`live`, `live:json`, `snapshot`, `hf`, `providers`), `examples/`
+  (runnable `verdict-summary.ts`), terminal demo SVG above the fold, social
+  preview card (`assets/social-preview.png`), issue/PR templates, CODE_OF_CONDUCT,
+  SECURITY.md. GitHub description + 10 topics set via API.
+- Dated live snapshot: `data/snapshot-2026-09-30.json` (HF 200, 3 OpenRouter
+  matches, article/blog 200).
+- Infra recon oddities #17 (381 public Fireworks subdomains) and #18 (Moonshot
+  TLS 1.0, Fireworks on Microsoft Entra).
 - Author deep-dive lane (Quill) complete: Wachtel benchmarked Kimi K3 herself
   on 2026-07-20 — the Ember-1 piece is the sequel to her own baseline (same
   hands, same methodology); disclosure module verified working with pre-series
   controls; Sep 29 double-header documented.
 ### Fixed
+- Attribution correction: the "40% faster and cheaper" X post (Sep 27) was
+  **Dzhulgakov**, not Lin Qiao (three working notes vs one public doc — the
+  public doc was wrong). Fixed in `docs/oddities.md` #4.
+- Free K3 routes re-probed 2026-09-30: ZenMux + aihubmix reachable;
+  TokenRouter/NaraRoute homepages not resolving. README row 6 + confidence
+  #18 now carry the re-probe date instead of a present-tense claim.
+- `.gitignore` now excludes `.env` (was committable by accident).
 - RETRACTED the "Sep 2026 pivot" claim in `docs/oddities.md` #7 and
   `docs/verdict.md`: her "X vs Y" format dates to 2025-09-02, ~16 LLM
   comparison pieces May–Jul 2026. It was our error, not hers.

@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a new check, data source, or oddity
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should the audit check?
+      description: The new lane, source, or oddity you want covered
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Live source
+      description: Where would the evidence come from? Public API, article, benchmark?
+      placeholder: "https://... (public, no key needed?)"
+    validations:
+      required: true
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Fit check
+      options:
+        - label: The source is public and re-checkable by anyone (evidence-first)
+        - label: The finding would carry an observation date
+        - label: It does not need model API spend to verify

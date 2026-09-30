@@ -1,6 +1,9 @@
 # Internal working notes — never published
 hidden/
 
+# Local config — secrets live here, never commit
+.env
+
 # OS / editor noise
 .DS_Store
 *.swp

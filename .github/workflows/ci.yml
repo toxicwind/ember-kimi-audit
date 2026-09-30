@@ -1,0 +1,65 @@
+name: audit-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "17 9 * * 1"  # weekly drift check, Mondays 09:17 UTC
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: scripts parse
+        run: |
+          for f in scripts/*.ts; do bun build "$f" --external '*' --outfile /dev/null || exit 1; done
+          echo "all scripts parse"
+
+      - name: data snapshots are valid JSON
+        run: |
+          for f in data/*.json; do bun -e 'JSON.parse(await Bun.file(process.argv[1]).text())' "$f" || exit 1; done
+          echo "all snapshots valid"
+
+      - name: internal README/docs links resolve
+        run: |
+          bun -e '
+            import { Glob } from "bun";
+            const files = [];
+            for await (const f of new Glob("**/*.md").scan(".")) files.push(f);
+            const anchors = new Map();
+            for (const f of files) {
+              const t = await Bun.file(f).text();
+              for (const m of t.matchAll(/^#{1,6}\s+(.+)$/gm))
+                (anchors.get(f) ?? anchors.set(f, new Set()).get(f)).add(
+                  m[1].toLowerCase().replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-"));
+            }
+            let bad = 0;
+            for (const f of files) {
+              const t = await Bun.file(f).text();
+              for (const m of t.matchAll(/\]\((?!https?:|mailto:|#)([^)#]+)(#[^)]*)?\)/g)) {
+                const target = m[1].split("/").pop() || "README.md";
+                const dir = f.includes("/") ? f.slice(0, f.lastIndexOf("/") + 1) : "";
+                const path = (dir + m[1]).split("#")[0] || f;
+                if (!files.includes(path)) { console.log(`BROKEN ${f}: ${m[1]}`); bad++; }
+              }
+            }
+            if (bad) process.exit(1);
+            console.log(`checked ${files.length} markdown files, links resolve`);
+          '
+
+      - name: live sources (informational — external APIs flap)
+        continue-on-error: true
+        run: bun scripts/live-check.ts --json | tee /tmp/live-ci.json | head -c 400
+
+      - name: no secrets committed
+        run: |
+          ! git ls-files | grep -qx '\.env' || (echo ".env is tracked!" && exit 1)
+          ! grep -riE 'sk-(live|ant)-[A-Za-z0-9]{16,}' --include='*.ts' --include='*.md' . | grep -v hidden || exit 1
+          echo "no secrets in tree"

@@ -1,0 +1,44 @@
+{
+  "observed_at": "2026-09-30T11:21:45.503Z",
+  "hf": {
+    "bogus_control_status": 401,
+    "status": 200,
+    "gated": false,
+    "private": false,
+    "files": 119,
+    "sha": "f831ab668142",
+    "downloads": 1302723,
+    "license": "other"
+  },
+  "openrouter": {
+    "status": 200,
+    "matches": [
+      {
+        "id": "fireworks/ember-1",
+        "in": "0.000003",
+        "out": "0.000015",
+        "ctx": 1048576
+      },
+      {
+        "id": "moonshotai/kimi-k3",
+        "in": "0.000003",
+        "out": "0.000015",
+        "ctx": 1048576
+      },
+      {
+        "id": "moonshotai/kimi-k3:batch",
+        "in": "0.00000228",
+        "out": "0.0000114",
+        "ctx": 1048576
+      }
+    ]
+  },
+  "article": {
+    "status": 200,
+    "url": "https://thenewstack.io/ember1-kimik3-speed-comparison/"
+  },
+  "fireworks_blog": {
+    "status": 200,
+    "url": "https://fireworks.ai/blog/ember-1"
+  }
+}

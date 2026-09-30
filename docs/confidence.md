@@ -46,7 +46,7 @@ change the number. High confidence ≠ verified — only live sources verify.
 | # | Claim | Confidence | Why |
 |---|---|---|---|
 | 17 | Ember-1 free anywhere: nobody | **92%** | API-only, single provider (Fireworks), no `:free` OpenRouter routes, no weights. The 8% is promo credits / gateway trials. |
-| 18 | Kimi K3 free routes (ZenMux, TokenRouter, NaraRoute, aihubmix) work today | **60%** | Reported by the provider lane and consistent with known free-tier patterns, but not all re-probed live in the last 24h. Free tiers rot fastest — re-probe before relying. |
+| 18 | Kimi K3 free routes (ZenMux, TokenRouter, NaraRoute, aihubmix) work today | **60%** | Reported by the provider lane and consistent with known free-tier patterns. Re-probed 2026-09-30: ZenMux + aihubmix homepages reachable, TokenRouter/NaraRoute not resolving — free tiers rot fastest, re-probe before relying. |
 | 19 | Ember-1 preview ends ~Oct 7, 2026 (two-week window) | **75%** | Fireworks' stated research-preview cadence — but their own framing is permanence "based on community demand," so Oct 7 is a demand gate, not a hard kill date. The model page already lists it "ready for serverless use." |
 
 ## The meta-bets

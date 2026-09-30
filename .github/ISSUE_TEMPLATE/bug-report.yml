@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a wrong number, broken script, or dead link
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Where?
+      description: File path, README section, or doc anchor (e.g. docs/oddities.md#4)
+      placeholder: "README.md claims table row 3"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+      description: What the repo says vs what you observed
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (with dates)
+      description: Link the live source and the date you observed it. This audit is evidence-first — sourced corrections get merged fast.
+      placeholder: "https://... (observed 2026-09-30)"
+    validations:
+      required: true
+  - type: input
+    id: repro
+    attributes:
+      label: Repro command
+      description: If a script is involved, the exact command you ran
+      placeholder: "bun scripts/live-check.ts --json"
