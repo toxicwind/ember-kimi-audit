@@ -159,7 +159,7 @@ status — like the terminal screenshot at the top of this README.
 
 ## Usage
 
-The three things you'll actually do:
+The things you'll actually do:
 
 ```bash
 bun run live          # one-command live audit (human-readable)
@@ -168,6 +168,8 @@ bun run snapshot      # save a dated snapshot to data/ (data/snapshot-YYYY-MM-DD
 
 bun run hf            # Hub API repo verification with bogus-ID control
 bun run providers     # OpenRouter kimi/ember catalog snapshot
+
+bun run audit         # local CI mirror: parse, JSON, links, secret scan
 
 bun examples/verdict-summary.ts   # 10-second digest from the newest snapshot
 ```
@@ -182,7 +184,8 @@ Exa neural-search deep-dives are documented in the working notes.
 ember-kimi-audit/
 ├── README.md                  # this file
 ├── assets/
-│   └── live-check.svg         # terminal demo (above the fold)
+│   ├── live-check.svg         # terminal demo (above the fold)
+│   └── social-preview.png     # GitHub social preview (1280x640)
 ├── docs/
 │   ├── verdict.md             # the full verdict, claim by claim
 │   ├── oddities.md            # 18 documented oddities (the weirdness file)
@@ -191,7 +194,8 @@ ember-kimi-audit/
 ├── scripts/
 │   ├── live-check.ts          # one-command live audit (reads .env)
 │   ├── hf-check.ts            # Hub API repo verification
-│   └── providers.ts           # OpenRouter catalog snapshot
+│   ├── providers.ts           # OpenRouter catalog snapshot
+│   └── hygiene.ts             # local mirror of CI checks (`bun run audit`)
 ├── examples/
 │   └── verdict-summary.ts     # 10-second digest from the newest snapshot
 ├── data/                      # dated raw evidence (API responses, snapshots)
