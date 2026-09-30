@@ -1,7 +1,7 @@
 <div align="right">
 
 [![audit: live](https://img.shields.io/badge/audit-live%20sources-1f6feb?style=for-the-badge)](docs/verdict.md)
-[![weirdness: documented](https://img.shields.io/badge/weirdness-13%20oddities-critical?style=for-the-badge)](docs/oddities.md)
+[![weirdness: documented](https://img.shields.io/badge/weirdness-15%20oddities-critical?style=for-the-badge)](docs/oddities.md)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
 </div>
@@ -68,12 +68,13 @@ weird stuff is in the [oddities file](docs/oddities.md).
 | 6 | Free providers host Kimi K3 / Ember-1 | ⚠️ Split | Ember-1: nobody. Kimi K3: free tiers off-OR (ZenMux, TokenRouter, NaraRoute, aihubmix) |
 | 7 | "On-policy planning and learning" is a disclosed method | ❌ Phrase, not method | No loss, data mix, or pipeline published — [confidence #8](docs/confidence.md) |
 | 8 | Bedside Bench relationship undisclosed | ❌ Mostly wrong | Doximity released it open (CC BY-NC-SA 4.0) Sep 22, *before* Ember-1 — [oddities #2](docs/oddities.md#2-bedside-bench--the-undeclared-relationship-critique-is-mostly-wrong) |
+| 9 | Ember-1's commercial serving is covered by a Moonshot license agreement | ❓ Unknown | K3's license *requires* one for MaaS >$20M revenue; none disclosed — [oddities #14](docs/oddities.md#14-the-kimi-k3-license-gate--ember-1s-commercial-serving-may-require-a-moonshot-deal-nobody-has-disclosed) |
 
 Full claim-by-claim: [`docs/verdict.md`](docs/verdict.md).
 
 ## The weirdness
 
-Thirteen documented oddities — the short version:
+Fifteen documented oddities — the short version:
 
 - **The training algorithm is a phrase, not a method.** "On-policy planning and
   learning" has no loss function, no data mix, no pipeline. You can't audit

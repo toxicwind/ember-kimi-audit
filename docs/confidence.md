@@ -47,7 +47,7 @@ change the number. High confidence ≠ verified — only live sources verify.
 |---|---|---|---|
 | 17 | Ember-1 free anywhere: nobody | **92%** | API-only, single provider (Fireworks), no `:free` OpenRouter routes, no weights. The 8% is promo credits / gateway trials. |
 | 18 | Kimi K3 free routes (ZenMux, TokenRouter, NaraRoute, aihubmix) work today | **60%** | Reported by the provider lane and consistent with known free-tier patterns, but not all re-probed live in the last 24h. Free tiers rot fastest — re-probe before relying. |
-| 19 | Ember-1 preview ends ~Oct 7, 2026 (two-week window) | **75%** | Fireworks' stated research-preview cadence ("made permanent based on community demand"). They've extended before by their own description; "depends on usage" is the hedge. |
+| 19 | Ember-1 preview ends ~Oct 7, 2026 (two-week window) | **75%** | Fireworks' stated research-preview cadence — but their own framing is permanence "based on community demand," so Oct 7 is a demand gate, not a hard kill date. The model page already lists it "ready for serverless use." |
 
 ## The meta-bets
 
@@ -55,6 +55,13 @@ change the number. High confidence ≠ verified — only live sources verify.
 |---|---|---|---|
 | 20 | Ember-1 is primarily a marketing vehicle for Fireworks' Training platform | **70%** | The blog closes on it explicitly: "Ember is just the start of what you could build with the Fireworks Training platform." The 50+ experiments / 200+ evals / "no GPUs to provision" copy is platform marketing wearing a model launch. Doesn't make the model fake — makes the launch dual-purpose. |
 | 21 | No independent Ember-1-vs-K3 head-to-head will appear before the preview ends | **65%** | Four witnesses found zero; the window is ~7 days; repro costs ~$6. Someone motivated could still do it — the TNS prompts are public. |
+
+## Licensing & lineage (new lane, 2026-09-30)
+
+| # | Claim | Confidence | Why |
+|---|---|---|---|
+| 22 | Fireworks holds a commercial agreement with Moonshot covering Ember-1's serving under the K3 license's $20M MaaS gate | **45%** | The license text (verified in the HF repo) squarely requires it — MaaS, >$20M revenue, derivative works, commercial use. No agreement disclosed by either side. 45% because a company of Fireworks' size *usually* papers this, but Moonshot's total silence is the dog that didn't bark. A filing or statement moves it to 95% or 10%. |
+| 23 | Social-media "Ember" benchmark claims describe Fireworks' Ember-1 | **10%** | At least three unrelated things share the name; the viral ones (8B open-weights, BFCL #2) match none of Ember-1's known properties. Treat any social "Ember" benchmark as the wrong model until proven otherwise. |
 
 ## How to read this
 

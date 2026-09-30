@@ -109,6 +109,41 @@ A bare 401 proves nothing about a repo's existence — always run a bogus-ID
 control. (The "401 = gated, therefore exists" rule in the huggingface skill
 does not hold here.)
 
+## 14. The Kimi K3 license gate — Ember-1's commercial serving may require a Moonshot deal nobody has disclosed
+
+Kimi K3 ships under a custom "Kimi K3 License" (modified MIT, not OSI-certified).
+Section 2, verified against the license text in the
+[`moonshotai/Kimi-K3`](https://huggingface.co/moonshotai/Kimi-K3) repo itself:
+
+> "If the Licensee or any of its affiliates operates a Model as a Service
+> business, and the aggregate revenue of the Licensee and its affiliates
+> exceeds 20 million US dollars ... over any consecutive 12 months, the
+> Licensee must enter into a separate agreement with Moonshot AI before using
+> the Software **or its derivative works** for any commercial purpose."
+
+Fireworks is a MaaS business with a self-reported >$1B annualized run rate
+($1.505B Series D at $17.5B, July 2026). Ember-1 is a derivative work of Kimi
+K3 served commercially. The license gate squarely applies — and no Moonshot
+agreement has been disclosed by either side. Moonshot has said zero words
+about Ember-1 at all, while negotiating up-to-30% revenue shares with
+AWS/Microsoft/Google. Layer the Sep 9, 2026 NSA/FBI/CISA accusation that
+Moonshot distilled US models: the lineage question cuts both ways — an
+American company's closed derivative of a Chinese model that US agencies say
+was distilled from American models.
+
+## 15. At least three different things are called "Ember"
+
+Social is actively mis-describing Ember-1: an IG reel calls it "open-weights,
+8B params, #2 on BFCL after GPT-4o"; a Facebook reel calls it an "open-weight
+small LLM, ~30 tok/s on a single A10G." Neither describes Fireworks' Ember-1
+(API-only, no weights, no size published). Add Slow Lit Labs' "Ember" research
+project (long-horizon coherence evals) and at least three unrelated things
+share the name. Anyone citing "Ember" benchmarks from social is probably
+citing the wrong model. Separately: on Sep 24, the day after launch, an
+independent operator hit `fireworks/ember-1` via OpenRouter twice and got HTTP
+503 "no healthy upstream" — a real day-one serving failure on that path,
+published honestly. Whether it recurred is unknown.
+
 ## What's solid underneath
 
 - Ember-1 is real, Fireworks-confirmed, built on Kimi K3 (open weights,
